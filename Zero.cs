@@ -1,3 +1,5 @@
+using System;
+
 public class Zero : Vehicle  // Electric motorcycle
 {
     public double BatteryKWh { get; set; }
@@ -5,5 +7,10 @@ public class Zero : Vehicle  // Electric motorcycle
     public void ChargeBattery()
     {
         // method definition omitted
+    }
+
+    public override void Drive()
+    {
+        Console.WriteLine("BBBbbzzzzz!");
     }
 }
