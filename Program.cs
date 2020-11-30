@@ -6,7 +6,12 @@ namespace inheritance
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Cessna myCessna = new Cessna();
+            Ram myRam = new Ram();
+            Tesla myTesla = new Tesla();
+            Zero myZero = new Zero();
+
+            myZero.Drive();
         }
     }
 }
