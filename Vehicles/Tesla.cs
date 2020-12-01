@@ -1,16 +1,19 @@
 using System;
 
-public class Tesla : Vehicle // Electric car
+namespace inheritance
 {
-    public double BatteryKWh { get; set; }
-
-    public void ChargeBattery()
+    public class Tesla : Vehicle, IElectricVehicle
     {
-        // method definition omitted
-    }
+        public double BatteryKWh { get; set; }
 
-    public override void Drive()
-    {
-        Console.WriteLine("Zzzzzzzzz!");
+        public void ChargeBattery()
+        {
+            Console.WriteLine("Battery charging for this rich person Tesla.");
+        }
+
+        public override void Drive()
+        {
+            Console.WriteLine("Zzzzzzzzz!");
+        }
     }
 }

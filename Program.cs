@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace inheritance
 {
@@ -6,34 +7,47 @@ namespace inheritance
     {
         static void Main(string[] args)
         {
-            Cessna myCessna = new Cessna();
-            Ram myRam = new Ram();
-            Tesla myTesla = new Tesla();
-            Zero myZero = new Zero();
+            Zero fxs = new Zero();
+            Zero fx = new Zero();
+            Tesla modelS = new Tesla();
 
-            // Cessna
-            myCessna.MainColor = "blue";
-            Console.Write($"A {myCessna.MainColor} Cessna flies, ");
-            myCessna.Drive();
-            Console.WriteLine(", overhead!");
+            List<IElectricVehicle> electricVehicles = new List<IElectricVehicle>() {
+                fx, fxs, modelS
+            };
 
-            // Ram
-            myRam.MainColor = "camo";
-            Console.Write($"A {myRam.MainColor} Ram barrels past you. The disgusting diesel engine vomits black exhaust with a ");
-            myRam.Drive();
-            Console.WriteLine("");
+            Console.WriteLine("Electric Vehicles");
+            // Get initial charge
+            electricVehicles.ForEach(v => Console.WriteLine($"{v.BatteryKWh}"));
+            // Charge battery to 100%
+            electricVehicles.ForEach(v => v.ChargeBattery());
+            // Get the new charge
+            electricVehicles.ForEach(v => Console.WriteLine($"{v.BatteryKWh}"));
 
-            // Tesla
-            myTesla.MainColor = "white";
-            Console.Write($"A {myTesla.MainColor} Tesla zips past you. The electric engine goes ");
-            myTesla.Drive();
-            Console.WriteLine("");
-            
-            // Zero
-            myZero.MainColor = "black";
-            Console.Write($"A {myZero.MainColor} Zero careens past you. The electric engine whines ");
-            myZero.Drive();
-            Console.WriteLine("");
+            // /***********************************************/
+
+            // Ram ram = new Ram ();
+            // Cessna cessna150 = new Cessna ();
+
+            // List<???> gasVehicles = new List<???>() {
+            //     ram, cessna150
+            // };
+
+            // Console.WriteLine("Gas Vehicles");
+            // foreach(??? gv in gasVehicles)
+            // {
+            //     Console.WriteLine($"{gv.CurrentTankPercentage}");
+            // }
+
+            // foreach(??? gv in gasVehicles)
+            // {
+            //     // This should completely refuel the gas tank
+            //     gv.RefuelTank();
+            // }
+
+            // foreach(??? gv in gasVehicles)
+            // {
+            //     Console.WriteLine($"{gv.CurrentTankPercentage}");
+            // }
         }
     }
 }

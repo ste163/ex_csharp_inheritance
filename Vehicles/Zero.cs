@@ -1,16 +1,14 @@
 using System;
 
-public class Zero : Vehicle  // Electric motorcycle
+namespace inheritance
 {
-    public double BatteryKWh { get; set; }
-
-    public void ChargeBattery()
+    public class Zero : Vehicle, IElectricVehicle
     {
-        // method definition omitted
-    }
+        public double BatteryKWh { get; set; }
 
-    public override void Drive()
-    {
-        Console.WriteLine("BBBbbzzzzz!");
+        public override void Drive()
+        {
+            Console.WriteLine("BBBbbzzzzz!");
+        }
     }
 }
