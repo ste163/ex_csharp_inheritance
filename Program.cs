@@ -21,6 +21,19 @@ namespace inheritance
             myRam.MainColor = "camo";
             Console.Write($"A {myRam.MainColor} Ram barrels past you. The disgusting diesel engine vomits black exhaust with a ");
             myRam.Drive();
+            Console.WriteLine("");
+
+            // Tesla
+            myTesla.MainColor = "white";
+            Console.Write($"A {myTesla.MainColor} Tesla zips past you. The electric engine goes ");
+            myTesla.Drive();
+            Console.WriteLine("");
+            
+            // Zero
+            myZero.MainColor = "black";
+            Console.Write($"A {myZero.MainColor} Zero careens past you. The electric engine whines ");
+            myZero.Drive();
+            Console.WriteLine("");
         }
     }
 }
