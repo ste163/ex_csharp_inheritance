@@ -1,16 +1,19 @@
 using System;
 
-public class Ram : Vehicle // Gas powered truck
+namespace inheritance
 {
-    public double FuelCapacity { get; set; }
-
-    public void RefuelTank()
+    public class Ram : Vehicle, IGasVehicle
     {
-        // method definition omitted
-    }
+        public double FuelCapacity { get; set; }
 
-    public override void Drive()
-    {
-        Console.Write("Grumble grumble grumble!");
+        public void RefuelTank()
+        {
+            FuelCapacity = 23;
+        }
+
+        public override void Drive()
+        {
+            Console.Write("Grumble grumble grumble!");
+        }
     }
 }

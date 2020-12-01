@@ -1,16 +1,19 @@
 using System;
 
-public class Cessna : Vehicle // Propellor light aircraft
+namespace inheritance
 {
-    public double FuelCapacity { get; set; }
-
-    public void RefuelTank()
+    public class Cessna : Vehicle, IGasVehicle
     {
-        // method definition omitted
-    }
+        public double FuelCapacity { get; set; }
 
-    public override void Drive()
-    {
-        Console.Write("GRAAAAA");
+        public void RefuelTank()
+        {
+            FuelCapacity = 56;
+        }
+
+        public override void Drive()
+        {
+            Console.Write("GRAAAAA");
+        }
     }
 }

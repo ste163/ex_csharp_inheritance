@@ -6,11 +6,6 @@ namespace inheritance
     {
         public double BatteryKWh { get; set; }
 
-        public void ChargeBattery()
-        {
-            Console.WriteLine("Battery charging for this rich person Tesla.");
-        }
-
         public override void Drive()
         {
             Console.WriteLine("Zzzzzzzzz!");
